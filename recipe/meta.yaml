@@ -8,8 +8,6 @@ package:
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/harmony-py-{{ version }}.tar.gz
   sha256: 5708ef7372f73d79133ffea11eba796de80c78353f2271eab165e522e7008d52
-  patches:
-    - 76.diff
 
 build:
   noarch: python
