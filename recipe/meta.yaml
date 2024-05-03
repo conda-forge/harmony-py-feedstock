@@ -1,13 +1,13 @@
 {% set name = "harmony-py" %}
-{% set version = "0.4.12" %}
+{% set version = "0.4.14" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/harmony-py-{{ version }}.tar.gz
-  sha256: 735b1410306110e6a0e76c305db98730d0060389fdc9e8403d2e4b0049143355
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
+  sha256: d33d8579af01e5597e938e0ae768d2d411da6ca09176f22b03c95f5b462394af
 
 build:
   noarch: python
