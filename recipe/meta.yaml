@@ -1,5 +1,5 @@
 {% set name = "harmony-py" %}
-{% set version = "0.4.14" %}
+{% set version = "0.4.15" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: d33d8579af01e5597e938e0ae768d2d411da6ca09176f22b03c95f5b462394af
+  sha256: 3c53caa6698289b8e3d5d84a8c9aea73c86481413290711979bb000685d1672b
 
 build:
   noarch: python
@@ -21,6 +21,7 @@ requirements:
     - setuptools
     - wheel
   run:
+    - shapely >=2.0.4,<2.1.dev0
     - python >=3.8
     - python-dateutil >=2.8.2,<2.9.dev0
     - python-dotenv >=0.20.0,<0.21.dev0
