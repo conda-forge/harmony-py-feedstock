@@ -23,16 +23,17 @@ requirements:
     - python-build
   run:
     - python >={{ python_min }}
-    # Harmony pins to "compatible releases" (~= X.Y.Z) which is equivalent to >= X.Y.Z, == Z.Y.*; see: 
+    # Harmony pins to "compatible releases" (~= X.Y.Z) which is equivalent to >= X.Y.Z, == Z.Y.* for pip
+    # or >=X.Y.Z,=X.Y for conda; see:
     # - https://peps.python.org/pep-0440/#compatible-release
     # - https://docs.conda.io/projects/conda/en/latest/user-guide/concepts/pkg-specs.html#package-match-specifications
-    - python-dateutil >=2.8.2,==2.8.*
-    - python-dotenv >=0.20.0,==0.20.*
-    - progressbar2 >=4.2.0,==4.2.*
-    - requests >=2.32.3,==2.32.*
-    - sphinxcontrib-napoleon >=0.7,==0.*
-    - curlify >=2.2.1,==2.2.*
-    - shapely >=2.0.4,==2.0.*
+    - python-dateutil >=2.8.2,=2.8
+    - python-dotenv >=0.20.0,=0.20
+    - progressbar2 >=4.2.0,=4.2
+    - requests >=2.32.3,=2.32
+    - sphinxcontrib-napoleon >=0.7,=0
+    - curlify >=2.2.1,=2.2
+    - shapely >=2.0.4,=2.0
 
 test:
   imports:
