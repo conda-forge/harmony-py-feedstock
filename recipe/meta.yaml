@@ -1,5 +1,6 @@
 {% set name = "harmony-py" %}
 {% set version = "0.5.0" %}
+{% set python_min = "3.9" %}
 
 package:
   name: {{ name|lower }}
@@ -16,12 +17,12 @@ build:
 
 requirements:
   host:
-    - python >=3.9
+    - python {{ python_min }}
     - pip
     - setuptools
-    - build
+    - python-build
   run:
-    - python >=3.9
+    - python >={{ python_min }}
     # Harmony pins to "compatible releases" (~= X.Y.Z) which is equivalent to >= X.Y.Z, == Z.Y.*; see: 
     # - https://peps.python.org/pep-0440/#compatible-release
     # - https://docs.conda.io/projects/conda/en/latest/user-guide/concepts/pkg-specs.html#package-match-specifications
@@ -39,6 +40,7 @@ test:
   commands:
     - pip check
   requires:
+    - python {{ python_min }}
     - pip
 
 about:
