@@ -1,5 +1,5 @@
 {% set name = "harmony-py" %}
-{% set version = "0.5.0" %}
+{% set version = "0.5.1" %}
 {% set python_min = "3.9" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: b11a919f896ec7878a3f20f35826b597c48742f812de93e178629d2664ac8030
+  sha256: 9220ede3f6180f71a1aad929f3670a68e4c2cfa6afe4f1e62283a7bcc2794859
 
 build:
   noarch: python
@@ -27,13 +27,13 @@ requirements:
     # or >=X.Y.Z,=X.Y for conda; see:
     # - https://peps.python.org/pep-0440/#compatible-release
     # - https://docs.conda.io/projects/conda/en/latest/user-guide/concepts/pkg-specs.html#package-match-specifications
-    - python-dateutil >=2.8.2,=2.8
-    - python-dotenv >=0.20.0,=0.20
-    - progressbar2 >=4.2.0,=4.2
-    - requests >=2.32.3,=2.32
-    - sphinxcontrib-napoleon >=0.7,=0
-    - curlify >=2.2.1,=2.2
-    - shapely >=2.0.4,=2.0
+    - python-dateutil >=2.8.2,<2.9.dev0
+    - python-dotenv >=0.20.0,<0.21.dev0
+    - progressbar2 >=4.2.0,<4.3.dev0
+    - requests >=2.32.3,<2.33.dev0
+    - sphinxcontrib-napoleon >=0.7,<1.dev0
+    - curlify >=2.2.1,<2.3.dev0
+    - shapely >=2.0.4,<2.1.dev0
 
 test:
   imports:
