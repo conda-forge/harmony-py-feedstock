@@ -1,5 +1,5 @@
 {% set name = "harmony-py" %}
-{% set version = "0.5.1" %}
+{% set version = "0.6.0" %}
 {% set python_min = "3.9" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: 9220ede3f6180f71a1aad929f3670a68e4c2cfa6afe4f1e62283a7bcc2794859
+  sha256: cf49dee5939c985513604f98a6a6a5426f6e999e3450454db6377615782d786b
 
 build:
   noarch: python
