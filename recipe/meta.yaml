@@ -1,5 +1,5 @@
 {% set name = "harmony-py" %}
-{% set version = "0.6.0" %}
+{% set version = "0.7.0" %}
 {% set python_min = "3.9" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: cf49dee5939c985513604f98a6a6a5426f6e999e3450454db6377615782d786b
+  sha256: 37b10d2d0dd98c84a90b608a40fa3e5609b5a25555c3bc3295bd95e08a15ff92
 
 build:
   noarch: python
@@ -27,7 +27,7 @@ requirements:
     # or >=X.Y.Z,=X.Y for conda; see:
     # - https://peps.python.org/pep-0440/#compatible-release
     # - https://docs.conda.io/projects/conda/en/latest/user-guide/concepts/pkg-specs.html#package-match-specifications
-    - python-dateutil >=2.8.2,<2.9.dev0
+    - python-dateutil >=2.9,<3.dev0
     - python-dotenv >=0.20.0,<0.21.dev0
     - progressbar2 >=4.2.0,<4.3.dev0
     - requests >=2.32.3,<2.33.dev0
