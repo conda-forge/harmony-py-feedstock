@@ -1,5 +1,5 @@
 {% set name = "harmony-py" %}
-{% set version = "1.3.3" %}
+{% set version = "1.3.4" %}
 {% set python_min = "3.9" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: d3f76a5e1e1f92626722e38cc0ac561cb02ed42c011f931a0cc4c21d4fbb7130
+  sha256: f802bd34d1b9193c6413ab0ffd473729918d1469664e5b19f7461cd50024a779
 
 build:
   noarch: python
@@ -33,7 +33,7 @@ requirements:
     - requests >=2.32.3,<2.33.dev0
     - sphinxcontrib-napoleon >=0.7,<1.dev0
     - curlify >=2.2.1,<2.3.dev0
-    - shapely >=2.0.4,<2.1.dev0
+    - shapely >=2.0.4,<3
 
 test:
   imports:
