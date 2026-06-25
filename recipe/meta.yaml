@@ -1,6 +1,6 @@
 {% set name = "harmony-py" %}
 {% set version = "1.4.0" %}
-{% set python_min = "3.9" %}
+{% set python_min = "3.10" %}
 
 package:
   name: {{ name|lower }}
@@ -23,15 +23,10 @@ requirements:
     - python-build
   run:
     - python >={{ python_min }}
-    # Harmony pins to "compatible releases" (~= X.Y.Z) which is equivalent to >= X.Y.Z, == Z.Y.* for pip
-    # or >=X.Y.Z,=X.Y for conda; see:
-    # - https://peps.python.org/pep-0440/#compatible-release
-    # - https://docs.conda.io/projects/conda/en/latest/user-guide/concepts/pkg-specs.html#package-match-specifications
     - python-dateutil >=2.9
     - python-dotenv >=1.1.0
     - progressbar2 >=4.2.0
     - requests >=2.32.3
-    - sphinxcontrib-napoleon >=0.7,<1.dev0
     - curlify >=2.2.1
     - shapely >=2.1.2
 
