@@ -1,5 +1,5 @@
 {% set name = "harmony-py" %}
-{% set version = "1.6.0" %}
+{% set version = "1.7.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: 85b6494b100427a277853bfe8c9c1beb08f17d82cc5d23bf5ca29d1541b596ba
+  sha256: af3c9a0a59da22835b6f6694b834caeac18ad3fce78b2a10f7a5a020da416981
 
 build:
   noarch: python
